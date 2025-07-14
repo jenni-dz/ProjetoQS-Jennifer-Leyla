@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Agenda Profissional - Home</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/home.js" defer></script>
+</head>
+<body>
+  <header>
+    <h2>Bem-vindo, <span id="user-name"></span></h2>
+    <nav>
+      <a href="adicionar.html">Adicionar Atividade</a>
+      <a href="relatorio.html">Relatório</a>
+      <button onclick="logout()">Sair</button>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h3>Pendentes</h3>
+      <div id="pendente" class="atividade-container"></div>
+    </section>
+    <section>
+      <h3>Em Andamento</h3>
+      <div id="em-andamento" class="atividade-container"></div>
+    </section>
+    <section>
+      <h3>Finalizados</h3>
+      <div id="finalizado" class="atividade-container"></div>
+    </section>
+  </main>
+</body>
+</html>
