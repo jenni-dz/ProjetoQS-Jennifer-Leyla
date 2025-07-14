@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Agenda Profissional - Adicionar</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h2>Bem-vindo, <span id="user-name"></span></h2>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="relatorio.html">Relatório</a>
+      <button onclick="logout()">Sair</button>
+    </nav>
+  </header>
+
+  <main>
+    <form onsubmit="return salvarAtividade()">
+      <h2 id="page-title">Adicionar Atividade</h2>
+      
+      <label for="titulo">Título:</label>
+      <input type="text" id="titulo" required />
+      
+      <div class="date-row">
+        <div>
+          <label for="inicio">Data de Início:</label>
+          <input type="date" id="inicio" required />
+        </div>
+        <div>
+          <label for="fim">Data de Fim:</label>
+          <input type="date" id="fim" required />
+        </div>
+      </div>
+      
+      <label for="prioridade">Prioridade:</label>
+      <select id="prioridade">
+        <option value="Baixa">Baixa</option>
+        <option value="Media">Média</option>
+        <option value="Alta">Alta</option>
+      </select>
+      
+      <label for="status">Status:</label>
+      <select id="status">
+        <option value="Pendente">Pendente</option>
+        <option value="Em Andamento">Em Andamento</option>
+        <option value="Finalizado">Finalizado</option>
+      </select>
+      
+      <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+        <button type="submit" id="submit-btn">Adicionar</button>
+        <button type="button" onclick="cancelar()" style="background-color: #6c757d;">Cancelar</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="js/adicionar.js"></script>
+</body>
+</html>
